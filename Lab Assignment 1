@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class book 
+class book
 {
 public:
     int id;
