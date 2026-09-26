@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class student
+{
+public:
+    string name;
+    int rollno;
+
+    static void showdata()
+    {
+        cout << "MIT ADTU SOAI" << endl;
+    }
+
+    void display()
+    {
+        cout << "Name:" << name << endl;
+        cout << "Rollno:" << rollno << endl;
+    }
+};
+
+int main()
+{
+    student s1;
+    s1.name = "Jayesh";
+    s1.rollno = 74;
+
+    student::showdata();
+    s1.display();
+
+    return 0;
+}
