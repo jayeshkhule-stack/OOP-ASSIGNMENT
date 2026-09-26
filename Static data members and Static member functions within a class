@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class student
+{
+public:
+    string name;
+    int rollno;
+    static string collegename;
+
+    static void showdata()
+    {
+        cout << "College name:" << collegename << endl;
+    }
+
+    void display()
+    {
+        cout << "Name:" << name << endl;
+        cout << "Rollno:" << rollno << endl;
+    }
+};
+
+string student::collegename = "MIT ADT";
+
+int main()
+{
+    student s1;
+    s1.name = "Jayesh";
+    s1.rollno = 74;
+
+    s1.display();
+    student::showdata();
+
+    return 0;
+}
