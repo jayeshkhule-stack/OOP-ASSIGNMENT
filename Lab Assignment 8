@@ -1,0 +1,62 @@
+
+#include<iostream>
+using namespace std;
+
+class person
+{
+public:
+    int age;
+    string name;
+
+    void sdisplay()
+    {
+        cout<<"Age:"<<age<<endl;
+        cout<<"Name:"<<name<<endl;
+    }
+};
+
+class employee:public person
+{
+public:
+    int empid;
+    string department;
+
+    void cdisplay()
+    {
+        cout<<"EmpID:"<<empid<<endl;
+        cout<<"Department:"<<department<<endl;
+    }
+};
+
+class manager:public employee
+{
+public:
+    string team;
+    int teamid;
+
+    void vdisplay()
+    {
+        cout<<"Team:"<<team<<endl;
+        cout<<"TeamID:"<<teamid<<endl;
+    }
+};
+
+int main()
+{
+    employee e1;
+    manager m;
+
+    e1.age=18;
+    e1.name="Jayesh";
+    e1.empid=3115;
+    e1.department="IT";
+
+    m.team="RESQTECH";
+    m.teamid=756;
+
+    e1.sdisplay();
+    e1.cdisplay();
+    m.vdisplay();
+
+    return 0;
+}
